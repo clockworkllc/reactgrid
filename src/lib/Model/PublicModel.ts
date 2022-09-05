@@ -478,6 +478,8 @@ export interface Cell {
     style?: CellStyle;
     /** Additional CSS classes */
     className?: string;
+    /** Used to force the cell to update in tryAppendChange, useful when pasting cells */
+    forceChange?: boolean;
 }
 
 /**
