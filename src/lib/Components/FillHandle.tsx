@@ -26,8 +26,8 @@ export const FillHandle: React.FC<FillHandleProps> = ({ state, location }) => {
       className="rg-touch-fill-handle"
       ref={targetRef}
       style={{
-        top: location.row.bottom - dimensions.width / 2,
-        left: location.column.right - dimensions.height / 2,
+        top: location.row.bottom,
+        left: location.column.right,
       }}
       onPointerDown={(event) => {
         if (event.pointerType !== "mouse") {

@@ -82,8 +82,6 @@
         }
         .rg-touch-fill-handle {
             position: absolute;
-            width: $fill-handle-area;
-            height: $fill-handle-area;
             background-color: $fill-handle-bg-color;
             touch-action: none;
             pointer-events: auto;
