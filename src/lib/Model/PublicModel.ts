@@ -10,6 +10,8 @@ import {
     TextCell, HeaderCell, CheckboxCell, DateCell, EmailCell, ChevronCell, NumberCell, TimeCell, DropdownCell
 } from './../CellTemplates';
 
+import { EventHandlers } from './EventHandlers';
+
 /**
  * `SelectionMode` is a marker for currect selection mode
  * 
@@ -162,6 +164,14 @@ export interface ReactGridProps {
      * @returns {boolean} Return `true` to allow droping column at specific column
      */
     readonly canReorderRows?: (targetRowId: Id, rowIds: Id[], dropPosition: DropPosition) => boolean;
+
+    /** 
+     * Called when the ReactGrid component is mounted
+     * 
+     * @param {EventHandlers} eventHandlers EventHandlers class with all the event handlers
+     * @returns {void}
+     */
+    readonly getEventHandler?: (eventHandlers: EventHandlers) => void;
 }
 
 /**
@@ -556,3 +566,5 @@ export interface MenuOption {
      */
     handler: (selectedRowIds: Id[], selectedColIds: Id[], selectionMode: SelectionMode, selectedRanges: Array<CellLocation[]>) => void;
 }
+
+export * from './EventHandlers';

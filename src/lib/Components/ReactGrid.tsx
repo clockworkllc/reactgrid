@@ -75,6 +75,7 @@ export class ReactGrid extends React.Component<ReactGridProps, State> {
 
   componentDidMount(): void {
     window.addEventListener("resize", this.eventHandlers.windowResizeHandler);
+    this.props.getEventHandler?.(this.eventHandlers);
   }
 
   componentWillUnmount(): void {
